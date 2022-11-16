@@ -17,7 +17,9 @@
   const handleEmailLogin = async () => {
     if (pass.length < 6) return;
 
-    const data = await firebase.auth().signInWithEmailAndPassword(email, pass);
+    const data = await firebase
+      .auth()
+      .signyarInWithEmailAndPassword(email, pass);
     await user.set(data);
 
     replace("/");
